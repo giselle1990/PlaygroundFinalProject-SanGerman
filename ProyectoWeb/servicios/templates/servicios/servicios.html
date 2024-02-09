@@ -1,0 +1,22 @@
+{% extends 'ProyectoWebApp/base.html' %}
+{% load static %}
+
+{% block content %}
+{%for servicio in servicios%}
+
+
+
+<div><p>
+    <p><img src="https://media.ambito.com/p/3fb7b094548bb3fd43def70de07f2f18/adjuntos/239/imagenes/040/058/0040058867/1200x675/smart/veraz-informejpg.jpg" style="width:50%;"></p>
+
+    
+    <h2 style="color: black;">{{ servicio.titulo }}</h2>
+
+    <p>{{servicio.contenido}}</p>
+    
+</p></div>
+
+https://www.veraz.com.ar/ECOMMERCE/AR/assets/images/products/ARG/catalogo_derecho_acceso.jpg
+
+{%endfor %}
+{% endblock %}

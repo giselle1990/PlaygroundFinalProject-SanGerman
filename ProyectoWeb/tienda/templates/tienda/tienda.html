@@ -1,0 +1,37 @@
+{% extends 'ProyectoWebApp/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="mt-5 mb-4">Estudio Jurídico San German y Asociados</h1>
+
+    {% for producto in productos %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{% static 'ProyectoWebApp/assets/imagen1.jpg' %}" class="img-fluid" alt="Descripción de la imagen">
+                        </div>
+                        <div class="col-md-8">
+                            <h5 class="card-title">{{ producto.nombre }}</h5>
+                            <p class="card-text">
+                                {{ producto.precio }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+{% endblock %}

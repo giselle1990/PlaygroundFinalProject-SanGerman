@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Creative - Start Bootstrap Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'ProyectoWebApp/assets/favicon.ico' %}" />
+
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'ProyectoWebApp/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+    <!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                <li class="nav-item {% if request.resolver_match.name == 'Home' %}active{% endif %} px-lg-4">
+                    <a class="nav-link" href="{% url 'Home' %}">Inicio</a></li>
+                <li class="nav-item {% if request.resolver_match.name == 'Servicios' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'Servicios' %}">Servicios</a></li>
+                <li class="nav-item {% if request.resolver_match.name == 'Tienda' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'Tienda' %}">Tienda</a></li>
+                <li class="nav-item {% if request.resolver_match.name == 'Contacto' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'Contacto' %}">Contacto</a></li>
+                
+    {% if messages %}    
+        {% for message in messages %}
+
+                    <div class="notification {{message.tags}}" 
+                {{message}} ></div>
+        {% endfor %}
+
+    {% endif %}            
+
+            <!-- base.html -->
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Estudio Juridico San German y Asociados</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">Estudio juridico dedicado al derecho penal, derecho civil y defensa de consumidor. A su vez, tambien desafectamos de VERAZ , nosis y BCRA. TU CONSULTA NO MOLESTA </p>
+                        <a class="btn btn-primary btn-xl" href="#about">Conocenos</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Contenido cambiante-->
+
+{% block content %}
+
+
+{% endblock %}
+
+
+<!-- Botón para acceder a términos y condiciones -->
+<a href="https://docs.google.com/document/d/1cz35Nn2V_Jn04HX05Jy59bMUSoyxRyUNP2kS9h-cXAY/edit?usp=sharing" class="terms-button">Términos y Condiciones</a>
+
+  
+
+
+
+</body>
+</html>
